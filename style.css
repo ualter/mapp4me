@@ -21,7 +21,19 @@ header {
     width: 100%;
     border-bottom: 1px dashed #b5e853;
     padding: 10px 0;
+    margin-bottom: 30px;
 }
 h3 {
     color: #666; 
+}
+
+a {
+    color:chocolate;
+    text-decoration: none;
+}
+p {
+    line-height: 1.5;
+}
+ul {
+    line-height: 1.4;
 }
