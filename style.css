@@ -1,7 +1,7 @@
 body {
     background-image: url(images/bkg.png);
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-    color: white;
+    color: rgb(200,200,200);
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 0px;
@@ -23,6 +23,9 @@ header {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+h2 {
+    color: rgb(122, 122, 122); 
+}
 h3 {
     color: #666; 
 }
@@ -30,6 +33,11 @@ h3 {
 a {
     color:chocolate;
     text-decoration: none;
+}
+a.menu {
+    color: rgb(195,195,195);
+    text-decoration: none;
+    font-size: 17px;
 }
 p {
     line-height: 1.5;
