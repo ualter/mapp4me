@@ -1,57 +1,71 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <script>
+            function highMenu(obj,sp) {
+                obj.style.color = "orange";
+                document.getElementById(sp).style.display = '';
+            }
+            function backToNormalMenu(obj,sp) {
+                obj.style.color = "rgb(200,200,200)";
+                document.getElementById(sp).style.display = 'none';
+            }
+
+        </script>
     </head>
     <body>
         <header><h1>./ Map Pause 4 Me</h1>
             <h2>X-Plane Flight Simulator Plugin</h2>
         </header>
-        <table>
+        <table border="0">
             <tr valign="top">
                 <td>
-                    <p style="line-height: 2.3;margin-top: -15px;margin-left: 10px;">
-                        <a class="menu" href="#features">Features</a><br>
-                        <a class="menu" href="#screenshots">Screenshots</a><br>
-                        <a class="menu" href="#installation">Installation</a><br>
-                        <a class="menu" href="#running">Running</a><br>
-                        <a class="menu" href="#docs">Docs</a><br>
-                        <a class="menu" href="#notes">Notes</a><br>
-                        <a class="menu" href="#contact">Contact</a><br>
+                    <p style="line-height: 2.3;margin-top: -15px;margin-left: 10px;width:200px;">
+                        <a class="menu" href="#features"     onmouseover="javascript:highMenu(this,'m1');" onmouseout="javascript:backToNormalMenu(this,'m1');"><span id="m1" style="display:none;"> //</span> Features</a><br>
+                        <a class="menu" href="#screenshots"  onmouseover="javascript:highMenu(this,'m2');" onmouseout="javascript:backToNormalMenu(this,'m2');"><span id="m2" style="display:none;"> // </span> Screenshots</a><br>
+                        <a class="menu" href="#installation" onmouseover="javascript:highMenu(this,'m3');" onmouseout="javascript:backToNormalMenu(this,'m3');"><span id="m3" style="display:none;"> // </span> Installation</a><br>
+                        <a class="menu" href="#running"      onmouseover="javascript:highMenu(this,'m4');" onmouseout="javascript:backToNormalMenu(this,'m4');"><span id="m4" style="display:none;"> // </span> Running</a><br>
+                        <a class="menu" href="#docs"         onmouseover="javascript:highMenu(this,'m5');" onmouseout="javascript:backToNormalMenu(this,'m5');"><span id="m5" style="display:none;"> // </span> Docs</a><br>
+                        <a class="menu" href="#notes"        onmouseover="javascript:highMenu(this,'m6');" onmouseout="javascript:backToNormalMenu(this,'m6');"><span id="m6" style="display:none;"> // </span> Notes</a><br>
+                        <a class="menu" href="#contact"      onmouseover="javascript:highMenu(this,'m7');" onmouseout="javascript:backToNormalMenu(this,'m7');"><span id="m7" style="display:none;"> // </span> Contact</a><br>
                     </p>
                 </td>
                 <td>
-                    <div  style="margin-left: 250px;margin-right: 150px">
+                    <div  style="margin-left: 50px;margin-right: 150px">
                         This is a plugin and Web Application built for the <a href="https://www.x-plane.com/" target="_blank">X-Plane Flight Simulator</a>.
 
                         <p align="justify">
-                        Despite the name, this version is not only for convinent pausing actions during your flight, it presents more features to enjoy your interaction with X-Plane using your Desktop, Tablet or Mobile.<br><br>
+                        Despite the name, this version is not only for convinent pausing actions during your flights, it also presents more features to enjoy your interaction with X-Plane using your Desktop, Tablet or Mobile.<br><br>
 
-                        The xpp4me is composed of two parts:
+                        The plugin is composed of two parts:
                         <ul>
-                            <li>X-Plane Plugin: built in C++, it is the plugin itself, working installed at the X-Plane, communicating with the Web Application.</li>
-                            <li>Web Application: built in Angular/Ionic/Javascript/CSS/HTML/Python technology, it is the Web Application interacting with X-Plane Plugin, providing a sort of cockpit to xpp4me</li>
+                            <li><font style="color:goldenrod">X-Plane Plugin:</font> built in C++, it is the plugin itself, working installed at X-Plane, communicating with the Web Application (optionally).</li>
+                            <li><font style="color:goldenrod">Web Application:</font> built in Angular/Ionic/Javascript/CSS/HTML/Python technology, it is the Web Application interacting with X-Plane Plugin, providing a sort of "cockpit" to Pause4Me Plugin</li>
                         </ul>
                         </p>
-                        
+                        <br><br>
 
                         <header>
                             <h3 id="features">Features</h3>
                         </header>
                         <p align="justify">
                             <ul>
-                                <li>A Map (Google Map style) to track your airplane during your flight</li>
-                                <li>Airplane avionics information (altitude, vertical speed, ground speed, distance)</li>
-                                <li>Draw your Flight Plan at the Map</li>
-                                <li>Information of each Waypoint at the Flight Plan</li>
-                                <li>Using the Map to configure Pause event (distance in nm), interacting with the Waypoints</li>
-                                <li>Pause the X-Plane from your Desktop, Mobile or Mobile</li>
-                                <li>Configure notifications (by time or distance) that it's about to happen</li>
-                                <li>Configure a pause event by a specific time</li>
-                                <li>Configure a pause event based on Min / Max Speed</li>
-                                <li>Configure a pause event based on Min / Max Altitude</li>
+                                <li>A Map (Google Map style) to track your airplane during your flight <i>(check screenshots)</i></li>
+                                <li>Airplane avionics information (altitude, vertical speed, ground speed, distance, heading degrees)</li>
+                                <li>Show a Flight Plan at the Map (Waypoints: Airport, VOR, Fix, NDB)</li>
+                                <li>View data of each Waypoint at the Flight Plan</li>
+                                <li>Use the Map to configure pause events, interacting directly with the Waypoints</li>
+                                <li>Pause X-Plane any moment from your Desktop, Mobile or Tablet</li>
+                                <li>Setup notifications (by time or distance) that it's about to happen</li>
+                                <li>Setup a pause event by a specific Time</li>
+                                <li>Setup a pause event based on Min / Max Speed</li>
+                                <li>Setup a pause event based on Min / Max Altitude</li>
+                                <li>Setup a pause event based on GPS coordinates</li>
+                                <li>Setup a pause event based on X-Plane Dataref's values</li>
                             </ul>
                         </p>
 
+                        <br><br>
                         <header>
                             <h3 id="screenshots">Screenshots</h3>
                         </header>
@@ -163,6 +177,8 @@
 
                             </table>
                         </p>
+
+                        <br><br>
                         <header>
                             <h3 id="installation">Installation</h3>
                         </header>
@@ -175,7 +191,7 @@
                             <span style="margin-left: 40px;">
                                 <font class="bullet">// 01. </font>
                                 <span class="bullet">
-                                    Download Python 3 from <a href="https://www.python.org/downloads/" target="_blank">&lt;&lt; here &gt;&gt;</a> and install it
+                                    Download Python 3 from <a href="https://www.python.org/downloads/" target="_blank">&lt;&lt; here &gt;&gt;</a> and install at your computer
                                 </span>
                             </span>
                             <br><br>
@@ -227,23 +243,141 @@
                             <span style="margin-left: 40px">
                                 <font class="bullet">// 01. </font>
                                 <span class="bullet">
-                                    Download the MapPause4Me Web Application
+                                    Download the <a href="https://github.com/ualter/mapp4me/raw/master/downloads/MapPause4Me-v0.5.zip">MapPause4Me-v0.5</a> Web Application to your computer
                                 </span>
                             </span>
                             <br>
-
-                            
-                            
-
-                           
+                            <span style="margin-left: 40px">
+                                <font class="bullet">// 02. </font>
+                                <span class="bullet">
+                                   Unzip the content of the file in any path you wish
+                                    <div style="color:goldenrod;margin-left:40px;margin-right: 300px;margin-top:0px;margin-bottom:-15px;background-color:black;font-family: Consolas;padding: 10px 10px 10px 20px;">
+                                        <span style="color:gray"># For example, you might have something like this:</span><br>
+                                        <span>c:\MapPause4Me-v0.5\</span><br>
+                                    </div>
+                                </span>
+                            </span>
+                            <br>
                         </p>
+                        <br><br>
 
                         <header>
                             <h3  id="running">Running</h3>
                         </header>
                         <p align="justify">
-                            ...
+                            <font class="bullet">--> </font><span class="subtitle">X-Plane Plugin Pause4Me</span><br>
+                            <span style="margin-left: 40px;">
+                                The plugin will be available as you start the X-Plane. 
+                            </span>
+                            <br>
+                            <span style="margin-left: 40px;">
+                                Access it through the menu to setup a pause event (check <a href="#docs">Docs</a> to know every function in its window):
+                                <div style="color:goldenrod;margin-left:40px;margin-right: 300px;margin-top:0px;margin-bottom:-15px;font-family: Consolas;padding: 10px 10px 10px 0px;">
+                                    <img src="images/MenuPluginInstalled.png"/><br><br>
+                                    <img src="images/PauseForMe.png"/>
+                                </div>                            
+                            </span>
+                            <br><br><br>
+                        
+                            <font class="bullet">--> </font><span class="subtitle">MapPause4Me Web Application</span><br>
+                            <span style="margin-left: 40px;">
+                                Running the MapPause4Me Web Application. 
+                            </span>
+                            <br><br>
+                            <span style="margin-left: 40px">
+                                <font class="bullet">// 01. </font>
+                                <span class="bullet">
+                                    First, on X-Plane, start the Transmitter at the PauseForMe Plugin setup window (you can close the window afterwards):
+                                    <div style="color:goldenrod;margin-left:20px;margin-right: 300px;margin-top:-8px;margin-bottom:-15px;font-family: Consolas;padding: 10px 10px 10px 20px;">
+                                        <img src="images/StartTransmitter.png"/>
+                                    </div>
+                                </span>
+                            </span>
+                            <br><br>
+                            <span style="margin-left: 40px">
+                                <font class="bullet">// 02. </font>
+                                <span class="bullet">
+                                    Goes to your MapPause4Me installation folder and execute the file <font style="font-family: Consolas;font-size: 18px;color:goldenrod">start.bat</font> (double-click):
+                                    <div style="color:goldenrod;margin-left:20px;margin-right: 300px;margin-top:-8px;margin-bottom:-15px;font-family: Consolas;padding: 10px 10px 10px 20px;">
+                                        <img src="images/MapPause4MeFolder.png"/>
+                                    </div>
+                                </span>
+                            </span>
+                            <br><br>
+                            <span style="margin-left: 40px">
+                                <font class="bullet">// 03. </font>
+                                <span class="bullet">
+                                    Two windows will be opened: <br>
+                                    <span style="margin-left: 40px;">
+                                    The web server, and you should keep it opened while running the Web Application:
+                                    </span>
+                                    <div style="color:goldenrod;margin-left:20px;margin-right: 300px;margin-top:-8px;margin-bottom:-38px;font-family: Consolas;padding: 10px 0px 0px 20px;">
+                                        <img src="images/WebServer.png"/><br><br>
+                                    </div>
+                                    <br>
+                                    <span style="margin-left: 40px;">
+                                        The another window is the Web Application itself and should opened in your default browser:
+                                    </span>
+                                    <div style="color:goldenrod;margin-left:20px;margin-right: 300px;margin-top:-8px;margin-bottom:-15px;font-family: Consolas;padding: 10px 10px 10px 20px;">
+                                        <a href="images/MapPause4Me_01.png" target="_blank">
+                                           <img src="images/MapPause4Me_01.png" width="1000"/>
+                                        </a>
+                                        <br>
+                                        Turn "Connect Me" on, and you're good to go...
+                                        <a href="images/MapPause4Me_02.png" target="_blank">
+                                            <img src="images/MapPause4Me_02.png" width="1000"/>
+                                        </a>
+                                    </div>
+                                </span>
+                            </span>
+                            <br><br>
+                            <span style="margin-left: 40px">
+                                <font class="bullet">// 04. </font>
+                                <span class="bullet">
+                                    Connect from a Mobile/Tablet<br>
+                                    <span style="margin-left: 40px;">
+                                     You can also use your Mobile/Tablet to access the MapPause4Me:
+                                    </span>
+                                    <br>
+                                    <span style="margin-left: 40px;">
+                                    <font class="bullet">//// 04.1. </font>First, find out the IP address of your computer <font class="bullet">// according to Google <a href="https://www.tp-link.com/us/support/faq/838/" target="_blank">&lt;&lt; this &gt;&gt;</a> might help you</font>
+                                    </span>
+                                    <br>
+                                    
+                                    <span style="margin-left: 40px;">
+                                    <font class="bullet">//// 04.2. </font>Open a browser on your Mobile/Tablet and access the MapPause4Me Web Application using your IP address:
+                                    </span>
+                                    <div style="color:goldenrod;margin-left:40px;margin-right: 300px;margin-top:0px;margin-bottom:-15px;background-color:black;font-family: Consolas;padding: 10px 10px 10px 20px;">
+                                        <span style="color:gray"># Assuming your computer's IP Address is 192.168.1.41, you should type:</span><br>
+                                        <span>http://192.168.1.41:9393/</span>
+                                    </div>
+                                    <br>
+                                    <span style="margin-left: 40px;">
+                                    <font class="bullet">//// 04.3. </font>On your Mobile/Tablet, goes to the MapPause4Me Menu Settings, and put your IP in X-Plane Communication Address
+                                    </span>
+
+                                    <div style="color:goldenrod;margin-left:20px;margin-right: 300px;margin-top:-8px;margin-bottom:-18px;font-family: Consolas;padding: 10px 0px 0px 20px;">
+                                        <img src="images/MenuConfigIpAddress.png"/>
+                                    </div>
+                                    <br>
+
+                                    <span style="margin-left: 40px;">
+                                        <font class="bullet">//// 04.4. </font>With X-Plane setup communication done, you should be ready to go:
+                                    </span>
+                                    <div style="color:goldenrod;margin-left:20px;margin-right: 300px;margin-top:-8px;margin-bottom:-18px;font-family: Consolas;padding: 10px 0px 0px 20px;">
+                                        <a href="images/iPhone_02.png" target="_blank"><img src="images/iPhone_02.png" width="450"/></a>&nbsp;&nbsp;
+                                        <a href="images/iPhone_01.png" target="_blank"><img src="images/iPhone_01.png" width="450"/></a>
+                                    </div>
+                                    <br>
+                                    <span style="margin-left: 40px;">
+                                    <font class="bullet" style="font-size: 12px;">
+                                        *Soon, hope have some time to finish and release the MapPause4Me Application versions (iOS and Android), this way the Notifications will work fine
+                                    </font>
+                                    </span>
+                                </span>
+                            </span>
                         </p>
+                        <br><br>
 
                         <header>
                             <h3  id="docs">Docs</h3>
@@ -252,27 +386,27 @@
                             <p class="subtitle">X-Plane Plugin (Installed at your X-Plane)</p>
                             <img src="images/HelpWindowPluginPauseForMe.png"/><br>
                             <br><br>
-                            <font class="bullet">01. </font><span class="bullet">Configuration of a pause event based on the <a href="https://en.wikipedia.org/wiki/Radio_navigation" target="_blank">Radio Navigation</a> DME (Frequencies Nav1/Nav2), using min and max comparisons of Time and/or Distance. It is also possible to enable a pause event using the <a href="https://en.wikipedia.org/wiki/Horizontal_situation_indicator" target="_blank">HSI Alignment</a>(if zeros)</span><br>
+                            <font class="bullet">01. </font><span class="bullet">Setup of a pause event based on the <a href="https://en.wikipedia.org/wiki/Radio_navigation" target="_blank">Radio Navigation</a> DME (Frequencies Nav1/Nav2), using min and max comparisons of Time and/or Distance. It is also possible to enable a pause event using the <a href="https://en.wikipedia.org/wiki/Horizontal_situation_indicator" target="_blank">HSI Alignment</a>(if zeros, will pause)</span><br>
                             <br>
-                            <font class="bullet">02. </font><span class="bullet">Configuration of a pause event when your airplane reaches out a minimum or maximum altitude (FT)</span><br>
+                            <font class="bullet">02. </font><span class="bullet">Setup a pause event when your airplane reaches out a minimum or maximum Altitude (FT)</span><br>
                             <br>
-                            <font class="bullet">03. </font><span class="bullet">Configuration of a pause event when your airplane reaches out a minimum or maximum airspeed (KTS)</span><br>
+                            <font class="bullet">03. </font><span class="bullet">Setup a pause event when your airplane reaches out a minimum or maximum Airspeed (KTS)</span><br>
                             <br>
-                            <font class="bullet">04. </font><span class="bullet">Pause when reaches the configured time</span><br>
+                            <font class="bullet">04. </font><span class="bullet">Pause when reaches a setup Time</span><br>
                             <br>
                             <font class="bullet">05. </font><span class="bullet">Pause event that uses the airplane GPS equipament, comparing the min and/or max of Distance and/or Time, of the current set Waypoint</span><br>
                             <br>
-                            <font class="bullet">06. </font><span class="bullet">According to the airplane's earth coordinate (latitude and longitude), if matches, a event pause is triggered. </span><br>
+                            <font class="bullet">06. </font><span class="bullet">According to the airplane's earth coordinate (latitude and longitude), if matches, a event pause will be triggered. </span><br>
                             <br>
-                            <font class="bullet">07. </font><span class="bullet">Enable a pause event based on the minimum distance of any of the configured <a href="https://en.wikipedia.org/wiki/Navigational_aid" target="_blank">NAVAIDs</a> </span><br>
+                            <font class="bullet">07. </font><span class="bullet">Enable a pause event based on the minimum distance of any of the setup <a href="https://en.wikipedia.org/wiki/Navigational_aid" target="_blank">NAVAIDs</a> </span><br>
                             <br>
-                            <font class="bullet">08. </font><span class="bullet">This is likely the most flexible way to configure a pause event, using the <a href="https://developer.x-plane.com/datarefs/" target="_blank">Datarefs</a> of X-Plane. You must fill up with the correct path of a existent Dataref, and at the second inputbox the value for comparison. In case of the value, when any signal is added together, the equal (=) is used, also you can use greater than (>=) and lesser than (&lt;=) </a> </span><br>
+                            <font class="bullet">08. </font><span class="bullet">This is likely the most flexible way to configure a pause event, using the <a href="https://developer.x-plane.com/datarefs/" target="_blank">Datarefs</a> of X-Plane. You must fill up with the correct path of an existent Dataref, and at the second inputbox the value for comparison. In case of the value, when any signal is added, the equal (=) is assumed to be used, nevertheless you can also use greater than (>=) and lesser than (&lt;=) </a> </span><br>
                             <br>
                             <font class="bullet">09. </font><span class="bullet">Here you can fill up or paste a series of Navigational Waypoints(NAVAIDs - Airports, VORs, Fixes, NDBs), like your Fligth Plan, and than send it to the Web Application (using the <i>Send</i> button,n.o 15)</a> </span><br>
                             <br>
-                            <font class="bullet">10. </font><span class="bullet">In case your Flight Plan contains <a href="https://en.wikipedia.org/wiki/Airway_(aviation)" target="_blank">AIRWAYS</a> on it (like UN975, UM731), the Plugin will attempt to translate it to the sequence of NAVAIDs that compose the Airway</span><br>
+                            <font class="bullet">10. </font><span class="bullet">In case your Flight Plan contains <a href="https://en.wikipedia.org/wiki/Airway_(aviation)" target="_blank">AIRWAYS</a> on it (like UN975, UM731), the Plugin will attempt to translate it to the sequence of NAVAIDs that compose the Airway. The X-Plane database will be used as reference</span><br>
                             <br>
-                            <font class="bullet">11. </font><span class="bullet">If you use the functionality of the "Translate Flight Plan", previous item explained, you have the chance to bring back your original Flight Plan with all your Airways, removing the inserted translated Navaids</span><br>
+                            <font class="bullet">11. </font><span class="bullet">If you use the functionality of the "Translate Flight Plan", previous item explained, here you have the chance to bring back your original Flight Plan with all your Airways, removing the inserted translated Navaids</span><br>
                             <br>
                             <font class="bullet">12. </font><span class="bullet">Copy to Clipboard your current Flight Plan (Ctrl + C does not work)</span><br>
                             <br>
@@ -280,13 +414,13 @@
                             <br>
                             <font class="bullet">14. </font>Clean the Flight Plan inputbox</span><br>
                             <br>
-                            <font class="bullet">15. </font>As mentioned at the 09 item, this button sends to all of your connected devices using the Web Application MapPause4Me. This way they receive and paint the underline Flight Plan</span><br>
+                            <font class="bullet">15. </font>As mentioned at the 09 item, this button sends the Waypoints to all your connected devices using the Web Application MapPause4Me. This way they receive and "paint" the underline Flight Plan</span><br>
                             <br>
                             <font class="bullet">16. </font>Save the current state, any information on this window will be stored to load again next time (Flight Plan, Distances min and max, etc.)</span><br>
                             <br>
                             <font class="bullet">17. </font>Exit</span><br>
                             <br>
-                            <font class="bullet">18. </font>This is the switch(ON/OFF) for the Transmitter of airplane's data to the MapPause4Me Web Application. Obviously this must be STARTED in order the Web Application works with your X-Plane</span><br>
+                            <font class="bullet">18. </font>This is the switch(ON/OFF) for the Transmitter that sends airplane's data to the MapPause4Me Web Application. Obviously this must be STARTED in order the Web Application works with your X-Plane</span><br>
                             <br>
 
                             <p class="subtitle">MapPause4Me Web Application</p>
@@ -297,7 +431,7 @@
                                 <img src="images/map_01.png">
                             </p>
                             <p align="justify">
-                                <table cellpadding="10" border=1>
+                                <table cellpadding="10" border="0">
                                     <tr valign="top">
                                         <td width="40%">
                                             There are three menu options available, click at the toggle menu icon (left upper corner) to access them:
@@ -305,9 +439,9 @@
                                             <p align="justify">
                                               <font class="bullet">Settings - </font><span class="bullet">Configuration of the connection with X-Plane, here you must set your Computer's IP Address, where the X-Plane is running, before trying to connect. Find out your Computers IP veryfing your <a href="images/NetworkConfiguration.png" target="_blank">Network Settings</a>, at Properties.</span>
                                               <br><br><br><br>
-                                              <font class="bullet">PauseForMe - </font><span class="bullet">This is where you can view, define and modify all the pause events, based on the all the available options. You can set a pause event, for instance, when the Airplane reaches out a specific altitude, and this configuration will be send to the X-Plane's Plugin.</span>
+                                              <font class="bullet">PauseForMe - </font><span class="bullet">This is where you can view, define and modify all the pause events, based on all available options. You can set a pause event, for instance, when the Airplane reaches out a specific altitude, and this configuration will be send to the X-Plane's Plugin.</span>
                                               <br><br><br><br>
-                                              <font class="bullet">Notifications <i>(Working on it...)</i> - </font><span class="bullet">Here you can configure  notifications, based on time or distance, that is, you can receive a notification when the airplane is 5 nm from a specific Waypoint, or...  3 minutes before reaches it.<font color="#666"><b><i> Notice!</b> This feature works on iOS and Android versions of the MapPause4Me Web Application, not on Browsers.  I am still working on them to a future release (when I have some time available to do it). Meanwhile it is possible to use Mobile/Tablet accesing with the Browser, where this Notification will not work properly.</i></font></span>
+                                              <font class="bullet">Notifications <i>(Working on it...)</i> - </font><span class="bullet">Here you can configure  notifications, based on time or distance, that is, you can receive a notification when the airplane is 5 nm from a specific Waypoint, or...  3 minutes before reaches it.<font color="#666"><b><i> Notice!</b> This feature works on iOS and Android versions of the MapPause4Me Web Application, not on browsers.  I am still working on them for a future release (when I have some time available to do it). Meanwhile it is possible to use Mobile/Tablet accesing with the Browser, which this Notification will not work properly.</i></font></span>
                                             </p>
                                         </td>
                                         <td>
@@ -322,20 +456,22 @@
                                 
                             </p>
                         </p>
+                        <br><br>
 
                         <header>
                             <h3  id="notes">Notes</h3>
                         </header>
                         <p align="justify">
-                            Professionaly, I do work with software development, and Flying (Flight Simulation) is one of my favorite hobbies, however everything here was done during my spare time, putting together both topics. I don't make any money with this plugin,  so bear in mind that I will try to work on issues or bring improvements when it were possible. Thanks!
+                            Professionaly, I do work with Software Architecture/Development, and Flying (Flight Simulation) is one of my favorite hobbies, however everything here was done during my spare time, putting together both topics. I don't make any money with this plugin/web application, so bear in mind that I will try to work on issues or bring improvements when possible. Thanks!
                         </p>
+                        <br><br>
 
                         <header>
                             <h3  id="contact">Contact</h3>
                         </header>
                         <p align="justify">
                             <a href="http://linkedin.com/in/ualter" target="_blank">http://linkedin.com/in/ualter</a><br>
-                            ualter.junior@gmail.com
+                            <font style="color:goldenrod">ualter.junior@gmail.com</font>
                             <br><br><br><br>
                         </p>
                     </div>
